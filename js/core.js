@@ -53,6 +53,11 @@ $(function () {
                 }
             }
         }
+        if(message.includes('book'))
+        {
+            addMessage("Go on for a appointment ", machineName, true);
+            $(".but_1").show();
+        }
 
 
         /*switch (message.toLowerCase()) {
