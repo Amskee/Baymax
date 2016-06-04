@@ -1,19 +1,180 @@
+<html>
+<head><title>Baymax</title>
 <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
-<style>body { 
-   background-image: url("https://image.freepik.com/free-photo/blurry-blurred-blur-background-backdrop-abstract_121-17167.jpg"); 
-  
-}</style>
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+</head>
+<style>
+h2 {font-family: 'Montserrat', sans-serif;
+padding-bottom: 0.5cm;
+padding-top: 0.2cm;
+text-align:center;
+text-transform: uppercase;
+color: #fbfcfc;
+margin: 0.3em 0 0;
+  color: white;
+  font-size: 90px;
+  text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+}
+h3 {font-family: 'Montserrat', sans-serif;
+padding-bottom: 10px;
+text-align:center;
+  color:#bdc3c7;
+    
+    font-size:3em;
+    text-shadow: 0px 1px 1px #2c3e50; 
+}
+.listStyle{
+        list-style-type: square;
+        color: #ff0000;
+    }
+#textStyle{
+    
+        color: #ff0000;
+    }
+* {
+  outline:none;
+	border:none;
+	margin:0px;
+	padding:0px;
+	font-family: 'Montserrat', sans-serif;
+  color: #FFF;
+}
+body {
+	background:#333 url(http://static.tumblr.com/maopbtg/a5emgtoju/inflicted.png) repeat;        
+}
+#paper {
+	color:#FFF;
+	font-size:20px;
+}
+#margin {
+	margin-left: 5px;
+	margin-bottom:20px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none; 
+}
+#text {
+	width:500px;
+	overflow:hidden;
+	background-color:#FFF;
+	color:#222;
+	font-family:Courier, monospace;
+	font-weight:normal;
+	font-size:24px;
+	resize:none;
+	line-height:40px;
+	padding-left:150px;
+	padding-right:100px;
+	padding-top:45px;
+	padding-bottom:34px;
+	background-image:url(http://static.tumblr.com/maopbtg/E9Bmgtoht/lines.png), url(http://static.tumblr.com/maopbtg/nBUmgtogx/paper.png);
+	background-repeat:repeat-y, repeat;
+	-webkit-border-radius:12px;
+	border-radius:12px;
+	-webkit-box-shadow: 0px 2px 14px #000;
+	box-shadow: 0px 2px 14px #000;
+	border-top:1px solid #FFF;
+	border-bottom:1px solid #FFF;
+}
+#title {
+	background-color:transparent;
+	border-bottom:3px solid #FFF;
+	color:#FFF;
+	font-size:20px;
+	font-family:Courier, monospace;
+	height:28px;
+	font-weight:bold;
+	width:220px;
+}
+#wrapper {
+	width:500px;
+	height:auto;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:0px;
+	margin-bottom:100px;
+}
+#submit {
+    
+    height: 32px;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+    font-family: 'Montserrat', sans-serif;
+    line-height: 32px;
+    text-transform: uppercase;
+    margin: 1em auto;
+    display: block;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    border-radius: 3px;
+    color: #2980b9;
+    text-shadow: 1px 1px #D0E5A4;
+    border: 1px solid #89A94D;
+    border-top: 1px solid #AAD063;
+    border-bottom: 1px solid #6D883B;
+    box-shadow:
+        inset 0 1px #E0EEB6,
+        inset 1px 0 #C6E08D,
+        inset -1px 0 #C6E08D,
+        inset 0 -1px #B4D579,
+        0 2px #799545,
+        0 3px #6D883B,
+        0 4px 2px rgba(0,0,0,0.4)
+    ;
+    background: -moz-linear-gradient(top,  #cae285 0%, #a3cd5a 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cae285), color-stop(100%,#a3cd5a)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #cae285 0%,#a3cd5a 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #cae285 0%,#a3cd5a 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #cae285 0%,#a3cd5a 100%); /* IE10+ */
+    background: linear-gradient(top,  #cae285 0%,#a3cd5a 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cae285', endColorstr='#a3cd5a',GradientType=0 ); /* IE6-9 */
+    background-color: #B6D76F;
+}
+#submit::-moz-focus-inner{border:0}
+#submit:hover {
+    border-top: 1px solid #98B85B;
+    box-shadow:
+        inset 0 1px #CCE3A1,
+        inset 1px 0 #C6E08D,
+        inset -1px 0 #C6E08D,
+        inset 0 -1px #C7E18E,
+        0 2px #799545,
+        0 3px #6D883B,
+        0 4px 2px rgba(0,0,0,0.4)
+    ;
+    background: -moz-linear-gradient(top,  #abd164 0%, #b9d972 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#abd164), color-stop(100%,#b9d972)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #abd164 0%,#b9d972 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #abd164 0%,#b9d972 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #abd164 0%,#b9d972 100%); /* IE10+ */
+    background: linear-gradient(top,  #abd164 0%,#b9d972 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#abd164', endColorstr='#b9d972',GradientType=0 ); /* IE6-9 */
+    background-color: #B6D76F;
+}
+#submit:active {
+    top: 3px;
+    border: 1px solid #88A84E;
+    border-top: 1px solid #6E883F;
+    border-bottom: 1px solid #95B855;
+    background: #A7CF5F;
+    box-shadow: inset 0 1px 2px #779441;
+}
+</style>
 
 <script tpye="text/javascript">
    $(function () {
   
-  var die = ["R.I.P", "May mah soul rest in peace", "Good joke lame a*s","Is it no problem , if I shutdown ??"];
+  var die = ["R.I.P", "rest in peace", "Good joke","Is it no problem , if I shutdown?"];
   var close=3;
   
-  var machineName = "Lol";
+  var machineName = "Baymax";
   $(".status-text").hide();
   function addMessage(message, author, machine) {
-    $("#messages").append('<li style="display: none;"><strong title="' + author + '">' + author + ': </strong><span>' + message +  '</span></li>');
+    $("#messages").append('<li class="listStyle" style="display: none;"><span style="color:lightblue">' + author + ': </span><span style="color:green">' + message +  '</span></li>');
     if (typeof machine == "boolean")
       $(".status-text").fadeOut();
     else
@@ -25,14 +186,14 @@
         switch (message.toLowerCase()) {
           case "book":
             
-            addMessage("Hqllo, " + localStorage.username + "! How are you?", machineName, true);
+            addMessage("Hello, " + localStorage.username + "! How are you?", machineName, true);
           
         $(".but_1").show();
             
             break;
           case "hello":
-          case "ff":
-            addMessage("aa, ", machineName, true);
+          case "hi":
+            addMessage("Hey there! Have a good day.", machineName, true);
             break;
           case "die":
             var randomNumber = Math.floor(Math.random()*die.length);
@@ -76,6 +237,10 @@
   });
 });
 </script>
+<body>
+   <h2>Hello! I'm Baymax! <br /></h2><h3>Your personal healthcare companion.<br />
+       How can I help you today?</h3>
+      <div id="wrapper">
 <div id="chatContainer">
   <div id="messages"></div>
   <div class="status-text"></div>
@@ -83,9 +248,13 @@
 
   <form action="" id="chatInput">
     
-     <textarea></textarea>
-      <input name="enviar" type="submit" id="c_input_submit" class="but_1" style="display:none;" value="Book Appointments" />
-      <input type="submit" value="Send" />
+     <textarea id="text"></textarea>
+      <input type="submit" id="submit" class="but_1" style="display:none;" value="Book Appointments" />
+      <input type="submit"  id="submit" value="Send" />
     
   </form>
 </div>
+</div>
+
+</body>
+</html>
